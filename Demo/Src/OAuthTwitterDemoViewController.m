@@ -10,8 +10,8 @@
 #import "SA_OAuthTwitterEngine.h"
 
 
-#define kOAuthConsumerKey				@""		//REPLACE ME
-#define kOAuthConsumerSecret			@""		//REPLACE ME
+#define kOAuthConsumerKey				@"1f8p4Jk2IKugPtjKaxX3qg"
+#define kOAuthConsumerSecret			@"Z6Wk8RMsQHC8nNCsJSo4aZzhY3G8rxYMO1L0AQOC44"
 
 @implementation OAuthTwitterDemoViewController
 
@@ -73,7 +73,13 @@
 	if (controller) 
 		[self presentModalViewController: controller animated: YES];
 	else {
-		[_engine sendUpdate: [NSString stringWithFormat: @"Already Updated. %@", [NSDate date]]];
+        [_engine endUserSession];
+//		[_engine sendUpdate: [NSString stringWithFormat: @"Already Updated. %@"
+//                              @"http://www.odnoklassniki.ru/#st.cmd=userFriend&st._aid=NavMenu_User_Friends"
+//                              @"http://www.odnoklassniki.ru/#st.cmd=userFriend&st._aid=NavMenu_User_Friends2"
+//                              @"http://www.odnoklassniki.ru/#st.cmd=userFriend&st._aid=NavMenu_User_Friends3"
+//                              @"http://www.odnoklassniki.ru/#st.cmd=userFriend&st._aid=NavMenu_User_Friends4"
+//                              , [NSDate date]]];
 	}
 
 }
